@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संपर्क - महेश शरमाळे</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Mukta:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+            width: 100px;
+            height: 100px;
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+    <style>
+        .contact-section {
+            padding: 5rem 5%;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .contact-info.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .contact-info h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            transition: var(--transition);
+        }
+        
+        .info-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .info-icon {
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            color: var(--secondary-color);
+            background-color: rgba(255, 109, 0, 0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        
+        .info-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .info-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .social-contact {
+            margin-top: 3rem;
+        }
+        
+        .social-contact h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .social-icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icon-box:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: var(--light-color);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .contact-form.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .contact-form h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Mukta', sans-serif;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            background-color: #f9f9f9;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.2);
+            background-color: white;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .map-section {
+            margin-top: 5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .map-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .map-container {
+            height: 400px;
+            background: linear-gradient(45deg, #f5f7fa, #e8f5fe);
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--shadow);
+            font-size: 1.5rem;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>महेश शरमाळे</h1>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">होमपेज</a></li>
+                <li><a href="courses.html">कोर्सेस</a></li>
+                <li><a href="test-series.html">टेस्ट सिरीज</a></li>
+                <li><a href="batches.html">बॅचेस</a></li>
+                <li><a href="mentorship.html">मेंटॉरशिप</a></li>
+                <li><a href="videos.html">व्हिडीओज</a></li>
+                <li><a href="webinars.html">वेबिनार्स</a></li>
+                <li><a href="testimonials.html">विद्यार्थी अनुभव</a></li>
+                <li><a href="blog.html">ब्लॉग</a></li>
+                <li><a href="about.html">माझ्याविषयी</a></li>
+                <li><a href="contact.html" class="active">संपर्क</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>संपर्क</h1>
+            <p>आम्हाला संपर्क करा</p>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>संपर्क माहिती</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <h3>फोन</h3>
+                            <p>+91 9XXXXXXXXX</p>
+                            <p>+91 8XXXXXXXXX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>ईमेल</h3>
+                            <p>info@maheshsharmale.in</p>
+                            <p>contact@maheshsharmale.in</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🏢</div>
+                        <div class="info-content">
+                            <h3>पत्ता</h3>
+                            <p>महेश शरमाळे अकादमी,</p>
+                            <p>१२३, शिवाजी नगर,</p>
+                            <p>पुणे, महाराष्ट्र - ४११००५</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-content">
+                            <h3>कार्यालय वेळ</h3>
+                            <p>सोमवार - शनिवार: सकाळी १० ते संध्याकाळी ७</p>
+                            <p>रविवार: सकाळी १० ते दुपारी २</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h3>सोशल मीडिया</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon-box">YT</a>
+                            <a href="#" class="social-icon-box">IG</a>
+                            <a href="#" class="social-icon-box">WA</a>
+                            <a href="#" class="social-icon-box">FB</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>संपर्क फॉर्म</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">नाव</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">ईमेल</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">मोबाईल नंबर</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">विषय</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">संदेश</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn primary">पाठवा</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-section">
+                <h2 class="section-title">आमचे स्थान</h2>
+                <div class="map-container">
+                    <!-- Google Map will be embedded here -->
+                    <p>नकाशा येथे दिसेल</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>संपर्क</h3>
+                <p>📱 मोबाईल: +91 9XXXXXXXXX</p>
+                <p>✉️ ईमेल: info@maheshsharmale.in</p>
+                <p>🏢 पत्ता: पुणे, महाराष्ट्र</p>
+            </div>
+            <div class="footer-section">
+                <h3>सोशल मीडिया</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">YouTube</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>क्विक लिंक्स</h3>
+                <ul>
+                    <li><a href="index.html">होमपेज</a></li>
+                    <li><a href="courses.html">कोर्सेस</a></li>
+                    <li><a href="about.html">माझ्याविषयी</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 महेश शरमाळे. सर्व हक्क राखीव.</p>
+        </div>
+        <div class="whatsapp-float">
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate contact sections
+            setTimeout(function() {
+                document.querySelector('.contact-info').classList.add('show');
+                document.querySelector('.contact-form').classList.add('show');
+            }, 300);
+            
+            // Animate map section on scroll
+            function animateMapSection() {
+                const mapSection = document.querySelector('.map-section');
+                if (mapSection.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    mapSection.classList.add('show');
+                }
+            }
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateMapSection);
+            
+            // Run once on page load
+            setTimeout(animateMapSection, 500);
+            
+            // Contact form submission with animation
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Add submission animation
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'पाठवत आहे...';
+                submitBtn.disabled = true;
+                
+                setTimeout(function() {
+                    alert('आपला संदेश यशस्वीरित्या पाठवला गेला आहे. आम्ही लवकरच आपल्याशी संपर्क साधू.');
+                    document.getElementById('contactForm').reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+            
+            // Form input animation
+            const formControls = document.querySelectorAll('.form-control');
+            formControls.forEach(control => {
+                control.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                control.addEventListener('blur', function() {
+                    if (this.value === '') {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

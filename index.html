@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>महेश शरमाळे - स्पर्धा परीक्षेचा आत्मविश्वास, आता प्रत्येक गावात</title>
+    <meta name="description" content="महेश शरमाळे - पोलीस भरती तज्ञ | 5+ वर्षांचा अनुभव | 1000+ विद्यार्थी यशस्वी">
+    <meta property="og:title" content="महेश शरमाळे - स्पर्धा परीक्षेचा आत्मविश्वास, आता प्रत्येक गावात">
+    <meta property="og:description" content="पोलीस भरती तज्ञ | 5+ वर्षांचा अनुभव | 1000+ विद्यार्थी यशस्वी">
+    <meta property="og:image" content="My data/WhatsApp_Image_2025-07-19_at_12.47.52_94bcc456-removebg-preview.png">
+    <meta property="og:url" content="https://maheshsharmale.in">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/images.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Mukta:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+            width: 100px;
+            height: 100px;
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .animate-on-load {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .animate-on-load.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+            animation: fadeInUp 1s ease-out 0.2s;
+            animation-fill-mode: both;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(255, 167, 38, 0.2);
+            color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease-out 0.1s;
+            animation-fill-mode: both;
+        }
+        
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .cta-btn {
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .cta-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .cta-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1.2rem 5%;
+        }
+        
+        .navbar.scrolled {
+            padding: 0.8rem 5%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .app-like-section {
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .section-heading {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-icon {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+            color: var(--secondary-color);
+            background-color: rgba(255, 167, 38, 0.15);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Test Series Styles */
+        .test-series-tabs {
+            margin-bottom: 2rem;
+        }
+        
+        .tab-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            background-color: transparent;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        
+        .tab-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .test-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .test-card {
+            background-color: #f9f9f9;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .test-card-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            color: var(--primary-color);
+        }
+        
+        .test-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background-color: rgba(255, 167, 38, 0.2);
+            color: var(--secondary-color);
+        }
+        
+        .test-badge.premium {
+            background-color: rgba(26, 35, 126, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .test-badge.free {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+        }
+        
+        .test-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        /* Live Classes Styles */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .video-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            height: 180px;
+            background-color: #f3f4f6;
+            overflow: hidden;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #777;
+            font-weight: 500;
+        }
+        
+        .video-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        .video-badge.live {
+            background-color: rgba(244, 67, 54, 0.9);
+            color: white;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .video-badge.recorded {
+            background-color: rgba(26, 35, 126, 0.9);
+            color: white;
+        }
+        
+        .video-badge.free {
+            background-color: rgba(76, 175, 80, 0.9);
+            color: white;
+        }
+        
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 0.2rem 0.5rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .video-info {
+            padding: 1.2rem;
+        }
+        
+        .video-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+        
+        .video-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        /* Mentorship Styles */
+        .mentorship-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .mentorship-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .mentorship-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .mentorship-features {
+            margin-bottom: 2rem;
+        }
+        
+        .mentorship-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--secondary-color);
+            background-color: rgba(255, 167, 38, 0.15);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        
+        .mentorship-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .mentorship-testimonial {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-info h4 {
+            margin-bottom: 0.2rem;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .testimonial-content::before {
+            content: '"';
+            font-size: 3rem;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            color: rgba(0, 0, 0, 0.05);
+            font-family: serif;
+        }
+        
+        .testimonial-before-after {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        
+        .before-after-item {
+            text-align: center;
+        }
+        
+        .before-after-item span {
+            display: block;
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 0.5rem;
+        }
+        
+        .score {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .before-after-item:first-child .score {
+            color: #f44336;
+        }
+        
+        .before-after-item:last-child .score {
+            color: #4CAF50;
+        }
+        
+        .arrow {
+            font-size: 1.5rem;
+            color: #777;
+        }
+        
+        /* Batches and Webinars Styles */
+        .batches-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .batch-card, .webinar-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .batch-card:hover, .webinar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .batch-card.upcoming {
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .batch-header, .webinar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .batch-header h3, .webinar-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0;
+            color: var(--primary-color);
+        }
+        
+        .batch-badge, .webinar-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background-color: rgba(255, 167, 38, 0.2);
+            color: var(--secondary-color);
+        }
+        
+        .webinar-badge {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+        }
+        
+        .batch-countdown {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .countdown-title {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .countdown-item {
+            text-align: center;
+            background-color: white;
+            padding: 0.5rem;
+            border-radius: 8px;
+            min-width: 60px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .countdown-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        .batch-details, .webinar-details {
+            margin-bottom: 1.5rem;
+        }
+        
+        .batch-detail-item, .webinar-detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .detail-icon {
+            font-size: 1.2rem;
+            margin-right: 0.8rem;
+            color: var(--secondary-color);
+        }
+        
+        .batch-seats {
+            margin-bottom: 1.5rem;
+        }
+        
+        .seats-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .seats-progress {
+            height: 8px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .seats-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), #FF9800);
+            border-radius: 4px;
+        }
+        
+        .webinar-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+        
+        .webinar-topics {
+            margin-bottom: 1.5rem;
+        }
+        
+        .webinar-topics h4 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+        
+        .webinar-topics ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+        
+        .webinar-topics li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .batch-card .cta-btn, .webinar-card .cta-btn {
+            margin-top: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .mentorship-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .countdown-item {
+                min-width: 50px;
+            }
+            
+            .countdown-value {
+                font-size: 1.2rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.7rem;
+            }
+        }
+        
+        /* Top Performers Styles */
+        .performers-carousel-container {
+            position: relative;
+            padding: 1rem 0;
+        }
+        
+        .performers-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            gap: 1.5rem;
+            padding: 1rem 0.5rem;
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        .performers-carousel::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .performer-card {
+            flex: 0 0 auto;
+            width: 300px;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .performer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .performer-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 700;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .performer-info {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .performer-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            color: var(--primary-color);
+        }
+        
+        .performer-exam {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .performer-rank {
+            background-color: #f9f9f9;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .rank-label {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .rank-value {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .performer-quote {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .carousel-control {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        
+        .carousel-control:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .carousel-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        /* Learning Journey Styles */
+        .journey-container {
+            padding: 1rem 0;
+        }
+        
+        .journey-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .journey-step {
+            display: flex;
+            background-color: #f9f9f9;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            transition: var(--transition);
+            border-left: 5px solid #ddd;
+        }
+        
+        .journey-step.active {
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .step-icon {
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            color: var(--primary-color);
+            background-color: rgba(27, 60, 115, 0.1);
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .step-content p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .step-link {
+            color: var(--secondary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .step-link:after {
+            content: '\2192';
+            margin-left: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .step-link:hover:after {
+            transform: translateX(5px);
+        }
+        
+        .journey-progress {
+            padding: 2rem 0;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 1s ease;
+        }
+        
+        .progress-steps {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .progress-step {
+            text-align: center;
+            width: 25%;
+            position: relative;
+        }
+        
+        .step-dot {
+            width: 20px;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .progress-step.active .step-dot {
+            background-color: var(--secondary-color);
+            box-shadow: 0 0 0 5px rgba(255, 167, 38, 0.2);
+        }
+        
+        .progress-step span {
+            font-size: 0.9rem;
+            color: #777;
+            font-weight: 500;
+        }
+        
+        .progress-step.active span {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .journey-step {
+                flex-direction: column;
+            }
+            
+            .step-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .progress-step span {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>महेश शरमाळे</h1>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">मुखपृष्ठ</a></li>
+                <li><a href="courses.html">कोर्सेस</a></li>
+                <li><a href="test-series.html">टेस्ट सिरीज</a></li>
+                <li><a href="live-classes.html">लाईव्ह क्लासेस</a></li>
+                <li><a href="mentorship.html">मार्गदर्शन</a></li>
+                <li><a href="batches.html">बॅचेस</a></li>
+                <li><a href="success-stories.html">यशोगाथा</a></li>
+                <li><a href="blog.html">ब्लॉग</a></li>
+                <li><a href="about.html">माझ्याविषयी</a></li>
+                <li><a href="contact.html">संपर्क</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Enhanced Background -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="animated-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            <div class="hero-content reveal-left">
+                <div class="hero-badge">पोलीस भरती तज्ञ | 5+ वर्षांचा अनुभव</div>
+                <h1>पोलीस भरतीसाठी पक्की तयारी, अनुभवी मार्गदर्शनासह</h1>
+                <p class="tagline">स्पर्धा परीक्षेचा आत्मविश्वास, आता प्रत्येक गावात</p>
+                <div class="success-counter reveal">
+                    <div class="counter-icon">🏆</div>
+                    <div class="counter-text">
+                        <span class="counter-number">1000+</span>
+                        <span class="counter-label">यशस्वी विद्यार्थी</span>
+                    </div>
+                </div>
+                <div class="cta-group">
+                    <a href="courses.html" class="cta-btn cta-primary">कोर्स पाहा</a>
+                    <a href="test-series.html" class="cta-btn cta-secondary">मोफत टेस्ट द्या</a>
+                    <a href="batches.html" class="cta-btn cta-outline">बॅचमध्ये नावनोंदणी करा</a>
+                </div>
+            </div>
+            <div class="hero-image reveal-right">
+                <div class="instructor-frame">
+                    <img src="My data/WhatsApp_Image_2025-07-19_at_12.47.52_94bcc456-removebg-preview.png" alt="महेश शरमाळे - पोलीस भरती तज्ञ" class="profile-image">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Free Test Notification -->
+        <div class="free-test-notification">
+            <div class="notification-content">
+                <div class="notification-icon">📝</div>
+                <p>तुमचं तयारीचं मूल्यांकन करा – मोफत टेस्ट सिरीज आजच द्या!</p>
+            </div>
+            <a href="test-series.html" class="notification-btn">टेस्ट द्या</a>
+            <button class="notification-close">×</button>
+        </div>
+
+        <!-- Courses Section -->
+        <section id="courses" class="app-like-section">
+            <div class="section-heading">
+                <div class="section-icon">📚</div>
+                <h2 class="section-title">कोर्सेस</h2>
+            </div>
+            <div class="course-cards">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="My data/Maha_Combo.jpg" alt="पोलीस भरती कोर्स" class="course-thumbnail">
+                    </div>
+                    <h3>पोलीस भरती 2025 पूर्ण अभ्यासक्रम</h3>
+                    <p>कालावधी: ३ महिने</p>
+                    <p>फी: ₹५,०००</p>
+                    <ul>
+                        <li>संपूर्ण PDF नोट्स</li>
+                        <li>दररोज लाईव्ह क्लासेस</li>
+                        <li>50+ मॉक टेस्ट</li>
+                        <li>शारीरिक प्रशिक्षण</li>
+                    </ul>
+                    <a href="courses.html" class="cta-btn cta-primary">नोंदणी करा</a>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="My data/Nagar01.jpg" alt="तलाठी परीक्षा कोर्स" class="course-thumbnail">
+                    </div>
+                    <h3>तलाठी परीक्षा तयारी कोर्स</h3>
+                    <p>कालावधी: २ महिने</p>
+                    <p>फी: ₹४,०००</p>
+                    <ul>
+                        <li>संपूर्ण PDF नोट्स</li>
+                        <li>दररोज लाईव्ह क्लासेस</li>
+                        <li>40+ मॉक टेस्ट</li>
+                        <li>विषयवार सराव</li>
+                    </ul>
+                    <a href="courses.html" class="cta-btn cta-primary">नोंदणी करा</a>
+                </div>
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="My data/वनरक्षक भरती.jpg" alt="वनरक्षक कोर्स" class="course-thumbnail">
+                    </div>
+                    <h3>वनरक्षक संपूर्ण कोर्स</h3>
+                    <p>कालावधी: २.५ महिने</p>
+                    <p>फी: ₹४,५००</p>
+                    <ul>
+                        <li>संपूर्ण PDF नोट्स</li>
+                        <li>दररोज लाईव्ह क्लासेस</li>
+                        <li>35+ मॉक टेस्ट</li>
+                        <li>शारीरिक प्रशिक्षण</li>
+                    </ul>
+                    <a href="courses.html" class="cta-btn cta-primary">नोंदणी करा</a>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="courses.html" class="cta-btn cta-outline">सर्व कोर्सेस पहा</a>
+            </div>
+        </section>
+
+        <!-- Test Series Section -->
+        <section id="test-series" class="app-like-section">
+            <div class="section-heading">
+                <div class="section-icon">🧪</div>
+                <h2 class="section-title">टेस्ट सिरीज</h2>
+            </div>
+            
+            <div class="test-series-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="subject">विषयवार</button>
+                    <button class="tab-btn" data-tab="full">संपूर्ण पेपर</button>
+                    <button class="tab-btn" data-tab="free">मोफत टेस्ट</button>
+                </div>
+                
+                <div class="tab-content active" id="subject-tab">
+                    <div class="test-cards">
+                        <div class="test-card">
+                            <div class="test-card-header">
+                                <h3>मराठी व्याकरण</h3>
+                                <span class="test-badge">लोकप्रिय</span>
+                            </div>
+                            <div class="test-stats">
+                                <div class="stat">
+                                    <span class="stat-value">25</span>
+                                    <span class="stat-label">प्रश्न</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">30</span>
+                                    <span class="stat-label">मिनिटे</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">75%</span>
+                                    <span class="stat-label">सरासरी</span>
+                                </div>
+                            </div>
+                            <a href="test-series.html" class="cta-btn cta-primary">टेस्ट द्या</a>
+                        </div>
+                        
+                        <div class="test-card">
+                            <div class="test-card-header">
+                                <h3>इंग्रजी व्याकरण</h3>
+                            </div>
+                            <div class="test-stats">
+                                <div class="stat">
+                                    <span class="stat-value">20</span>
+                                    <span class="stat-label">प्रश्न</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">25</span>
+                                    <span class="stat-label">मिनिटे</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">68%</span>
+                                    <span class="stat-label">सरासरी</span>
+                                </div>
+                            </div>
+                            <a href="test-series.html" class="cta-btn cta-primary">टेस्ट द्या</a>
+                        </div>
+                        
+                        <div class="test-card">
+                            <div class="test-card-header">
+                                <h3>गणित</h3>
+                            </div>
+                            <div class="test-stats">
+                                <div class="stat">
+                                    <span class="stat-value">30</span>
+                                    <span class="stat-label">प्रश्न</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">40</span>
+                                    <span class="stat-label">मिनिटे</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">62%</span>
+                                    <span class="stat-label">सरासरी</span>
+                                </div>
+                            </div>
+                            <a href="test-series.html" class="cta-btn cta-primary">टेस्ट द्या</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="full-tab">
+                    <div class="test-cards">
+                        <div class="test-card">
+                            <div class="test-card-header">
+                                <h3>पोलीस भरती पूर्ण पेपर 1</h3>
+                                <span class="test-badge premium">प्रीमियम</span>
+                            </div>
+                            <div class="test-stats">
+                                <div class="stat">
+                                    <span class="stat-value">100</span>
+                                    <span class="stat-label">प्रश्न</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">90</span>
+                                    <span class="stat-label">मिनिटे</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">70%</span>
+                                    <span class="stat-label">सरासरी</span>
+                                </div>
+                            </div>
+                            <a href="test-series.html" class="cta-btn cta-primary">टेस्ट द्या</a>
+                        </div>
+                        
+                        <div class="test-card">
+                            <div class="test-card-header">
+                                <h3>पोलीस भरती पूर्ण पेपर 2</h3>
+                                <span class="test-badge premium">प्रीमियम</span>
+                            </div>
+                            <div class="test-stats">
+                                <div class="stat">
+                                    <span class="stat-value">100</span>
+                                    <span class="stat-label">प्रश्न</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">90</span>
+                                    <span class="stat-label">मिनिटे</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">65%</span>
+                                    <span class="stat-label">सरासरी</span>
+                                </div>
+                            </div>
+                            <a href="test-series.html" class="cta-btn cta-primary">टेस्ट द्या</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="free-tab">
+                    <div class="test-cards">
+                        <div class="test-card">
+                            <div class="test-card-header">
+                                <h3>मोफत प्रश्नसंच</h3>
+                                <span class="test-badge free">मोफत</span>
+                            </div>
+                            <div class="test-stats">
+                                <div class="stat">
+                                    <span class="stat-value">25</span>
+                                    <span class="stat-label">प्रश्न</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">30</span>
+                                    <span class="stat-label">मिनिटे</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">80%</span>
+                                    <span class="stat-label">सरासरी</span>
+                                </div>
+                            </div>
+                            <a href="test-series.html" class="cta-btn cta-primary">टेस्ट द्या</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="test-series.html" class="cta-btn cta-secondary">संपूर्ण प्रॅक्टिस सिरीज पहा</a>
+            </div>
+        </section>
+
+        <!-- Live Classes Section -->
+        <section id="live-classes" class="app-like-section">
+            <div class="section-heading">
+                <div class="section-icon">🎥</div>
+                <h2 class="section-title">लाईव्ह क्लासेस</h2>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="My data/Thumbnail_1.jpg" alt="व्हिडिओ थंबनेल" class="video-thumb-img">
+                        <span class="video-badge live">लाईव्ह</span>
+                        <div class="video-duration">45:00</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>पोलीस भरती - मराठी व्याकरण क्लास</h3>
+                        <p>आजच्या क्लासमध्ये आपण मराठी व्याकरणाचे महत्वाचे नियम शिकणार आहोत.</p>
+                        <div class="video-meta">
+                            <span>आज 7:00 PM</span>
+                            <span>2.5K विद्यार्थी</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="My data/Thumbnail_2.jpg" alt="व्हिडिओ थंबनेल" class="video-thumb-img">
+                        <span class="video-badge recorded">रेकॉर्डेड</span>
+                        <div class="video-duration">1:20:15</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>गणित - सराव पेपर सोडवा</h3>
+                        <p>या क्लासमध्ये आपण गणिताच्या सराव पेपरमधील प्रश्न सोडवणार आहोत.</p>
+                        <div class="video-meta">
+                            <span>2 दिवसांपूर्वी</span>
+                            <span>5.8K व्ह्यूज</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="My data/Nagar02.jpg" alt="व्हिडिओ थंबनेल" class="video-thumb-img">
+                        <span class="video-badge free">मोफत</span>
+                        <div class="video-duration">35:20</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>पोलीस भरती तयारी - मार्गदर्शन</h3>
+                        <p>पोलीस भरती परीक्षेसाठी कशी तयारी करावी यावर मार्गदर्शन.</p>
+                        <div class="video-meta">
+                            <span>1 आठवड्यापूर्वी</span>
+                            <span>15K व्ह्यूज</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="live-classes.html" class="cta-btn cta-outline">सर्व व्हिडिओज पहा</a>
+            </div>
+        </section>
+
+        <!-- Mentorship Section -->
+        <section id="mentorship" class="app-like-section">
+            <div class="section-heading">
+                <div class="section-icon">👥</div>
+                <h2 class="section-title">मार्गदर्शन</h2>
+            </div>
+            
+            <div class="mentorship-container">
+                <div class="mentorship-info">
+                    <h3>वैयक्तिक मार्गदर्शन</h3>
+                    <p>महेश शरमाळे यांच्या वैयक्तिक मार्गदर्शनाखाली तुमची तयारी वेगाने आणि योग्य दिशेने होईल. वैयक्तिक मार्गदर्शनामध्ये खालील गोष्टींचा समावेश आहे:</p>
+                    
+                    <ul class="mentorship-features">
+                        <li>
+                            <span class="feature-icon">📚</span>
+                            <span>वैयक्तिक अभ्यास योजना</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">📈</span>
+                            <span>नियमित प्रगती तपासणी</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">💬</span>
+                            <span>आठवड्यातून एकदा वैयक्तिक संवाद</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">📝</span>
+                            <span>विषयवार सराव आणि मार्गदर्शन</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mentorship-cta">
+                        <a href="mentorship.html" class="cta-btn cta-primary">अधिक माहिती</a>
+                        <a href="contact.html" class="cta-btn cta-outline">संपर्क करा</a>
+                    </div>
+                </div>
+                
+                <div class="mentorship-testimonial">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <div class="testimonial-placeholder">AS</div>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>अमोल साळुंखे</h4>
+                                <p>पोलीस भरती 2022</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"महेश सरांच्या वैयक्तिक मार्गदर्शनामुळे मला माझ्या कमजोर विषयांवर लक्ष केंद्रित करता आले आणि मी पहिल्याच प्रयत्नात पोलीस भरती परीक्षा उत्तीर्ण केली."</p>
+                        </div>
+                        <div class="testimonial-before-after">
+                            <div class="before-after-item">
+                                <span>आधी</span>
+                                <div class="score">65%</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="before-after-item">
+                                <span>नंतर</span>
+                                <div class="score">92%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Batches Section -->
+        <section id="batches" class="app-like-section">
+            <div class="section-heading">
+                <div class="section-icon">📅</div>
+                <h2 class="section-title">आगामी बॅचेस</h2>
+            </div>
+            
+            <div class="batches-container">
+                <div class="batch-card upcoming">
+                    <div class="batch-header">
+                        <h3>पोलीस भरती 2025 - नवीन बॅच</h3>
+                        <span class="batch-badge">नवीन</span>
+                    </div>
+                    
+                    <div class="batch-countdown">
+                        <div class="countdown-title">बॅच सुरू होण्यास बाकी</div>
+                        <div class="countdown-timer">
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="days">05</span>
+                                <span class="countdown-label">दिवस</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="hours">12</span>
+                                <span class="countdown-label">तास</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="minutes">45</span>
+                                <span class="countdown-label">मिनिटे</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="seconds">30</span>
+                                <span class="countdown-label">सेकंद</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="batch-details">
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">📅</span>
+                            <span>सुरू दिनांक: 15 जुलै 2023</span>
+                        </div>
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">🕒</span>
+                            <span>वेळ: सकाळी 10:00 - दुपारी 12:00</span>
+                        </div>
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">💰</span>
+                            <span>फी: ₹५,०००</span>
+                        </div>
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">💻</span>
+                            <span>माध्यम: ऑनलाईन + ऑफलाईन</span>
+                        </div>
+                    </div>
+                    
+                    <div class="batch-seats">
+                        <div class="seats-info">
+                            <span>मर्यादित जागा</span>
+                            <span>25/30 भरलेल्या</span>
+                        </div>
+                        <div class="seats-progress">
+                            <div class="seats-progress-bar" style="width: 83%;"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="batches.html" class="cta-btn cta-primary">आता नोंदणी करा</a>
+                </div>
+                
+                <div class="batch-card">
+                    <div class="batch-header">
+                        <h3>तलाठी परीक्षा तयारी बॅच</h3>
+                    </div>
+                    
+                    <div class="batch-details">
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">📅</span>
+                            <span>सुरू दिनांक: 20 जुलै 2023</span>
+                        </div>
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">🕒</span>
+                            <span>वेळ: संध्याकाळी 6:00 - 8:00</span>
+                        </div>
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">💰</span>
+                            <span>फी: ₹४,०००</span>
+                        </div>
+                        <div class="batch-detail-item">
+                            <span class="detail-icon">💻</span>
+                            <span>माध्यम: ऑनलाईन</span>
+                        </div>
+                    </div>
+                    
+                    <div class="batch-seats">
+                        <div class="seats-info">
+                            <span>मर्यादित जागा</span>
+                            <span>15/40 भरलेल्या</span>
+                        </div>
+                        <div class="seats-progress">
+                            <div class="seats-progress-bar" style="width: 37%;"></div>
+                        </div>
+                    </div>
+                    
+                    <a href="batches.html" class="cta-btn cta-primary">आता नोंदणी करा</a>
+                </div>
+                
+                <div class="webinar-card">
+                    <div class="webinar-header">
+                        <h3>मोफत वेबिनार</h3>
+                        <span class="webinar-badge">मोफत</span>
+                    </div>
+                    
+                    <div class="webinar-title">
+                        "पोलीस भरती 2025 - कशी कराल तयारी?"
+                    </div>
+                    
+                    <div class="webinar-details">
+                        <div class="webinar-detail-item">
+                            <span class="detail-icon">📅</span>
+                            <span>दिनांक: 10 जुलै 2023</span>
+                        </div>
+                        <div class="webinar-detail-item">
+                            <span class="detail-icon">🕒</span>
+                            <span>वेळ: संध्याकाळी 7:00 PM</span>
+                        </div>
+                        <div class="webinar-detail-item">
+                            <span class="detail-icon">💬</span>
+                            <span>वक्ता: महेश शरमाळे</span>
+                        </div>
+                    </div>
+                    
+                    <div class="webinar-topics">
+                        <h4>चर्चेचे मुद्दे:</h4>
+                        <ul>
+                            <li>पोलीस भरती परीक्षेचे स्वरूप</li>
+                            <li>अभ्यासाची योग्य पद्धत</li>
+                            <li>शारीरिक तयारीसाठी टिप्स</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="webinars.html" class="cta-btn cta-secondary">आता नोंदणी करा</a>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="batches.html" class="cta-btn cta-outline">सर्व बॅचेस पहा</a>
+            </div>
+        </section>
+
+        <!-- Top Performers Section -->
+        <section id="top-performers" class="app-like-section">
+            <div class="section-heading">
+                <div class="section-icon">🏆</div>
+                <h2 class="section-title">यशोगाथा</h2>
+            </div>
+            
+            <div class="performers-carousel-container">
+                <div class="performers-carousel">
+                    <div class="performer-card">
+                        <div class="performer-image">
+                            <div class="performer-placeholder">AS</div>
+                        </div>
+                        <div class="performer-info">
+                            <h3>अमोल साळुंखे</h3>
+                            <p class="performer-exam">पोलीस भरती 2022</p>
+                            <div class="performer-rank">
+                                <span class="rank-label">गुण</span>
+                                <span class="rank-value">92/100</span>
+                            </div>
+                            <p class="performer-quote">"महेश सरांच्या मार्गदर्शनामुळे मी पहिल्याच प्रयत्नात यशस्वी झालो."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="performer-card">
+                        <div class="performer-image">
+                            <div class="performer-placeholder">SP</div>
+                        </div>
+                        <div class="performer-info">
+                            <h3>स्वाती पाटील</h3>
+                            <p class="performer-exam">तलाठी परीक्षा 2021</p>
+                            <div class="performer-rank">
+                                <span class="rank-label">रॅंक</span>
+                                <span class="rank-value">राज्यात 15वा</span>
+                            </div>
+                            <p class="performer-quote">"महेश सरांच्या स्पेशल नोट्समुळे मला खूप मदत झाली."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="performer-card">
+                        <div class="performer-image">
+                            <div class="performer-placeholder">RJ</div>
+                        </div>
+                        <div class="performer-info">
+                            <h3>राहुल जाधव</h3>
+                            <p class="performer-exam">वनरक्षक 2022</p>
+                            <div class="performer-rank">
+                                <span class="rank-label">गुण</span>
+                                <span class="rank-value">88/100</span>
+                            </div>
+                            <p class="performer-quote">"महेश सरांच्या मार्गदर्शनामुळे मी वनरक्षक परीक्षेत यशस्वी झालो."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-control prev">←</button>
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="carousel-control next">→</button>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="success-stories.html" class="cta-btn cta-outline">सर्व यशोगाथा पहा</a>
+            </div>
+        </section>
+
+        <!-- Learning Journey Section -->
+        <section id="learning-journey" class="app-like-section">
+            <div class="section-heading">
+                <div class="section-icon">📈</div>
+                <h2 class="section-title">शिक्षण प्रवास</h2>
+            </div>
+            
+            <div class="journey-container">
+                <div class="journey-steps">
+                    <div class="journey-step active">
+                        <div class="step-icon">📚</div>
+                        <div class="step-content">
+                            <h3>अभ्यास सुरूवात</h3>
+                            <p>संपूर्ण अभ्यासक्रम समजून घ्या आणि तुमची अभ्यास योजना तयार करा.</p>
+                            <a href="#" class="step-link">अभ्यासक्रम पहा</a>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-step">
+                        <div class="step-icon">📝</div>
+                        <div class="step-content">
+                            <h3>नियमित अभ्यास</h3>
+                            <p>दररोज लाईव्ह क्लासेस आणि स्वतःचा अभ्यास करा.</p>
+                            <a href="#" class="step-link">क्लासेस पहा</a>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-step">
+                        <div class="step-icon">🧪</div>
+                        <div class="step-content">
+                            <h3>मॉक टेस्ट</h3>
+                            <p>नियमित मॉक टेस्ट देउन तुमची तयारी तपासा.</p>
+                            <a href="#" class="step-link">टेस्ट सिरीज पहा</a>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-step">
+                        <div class="step-icon">🏁</div>
+                        <div class="step-content">
+                            <h3>परीक्षा</h3>
+                            <p>आत्मविश्वासाने परीक्षेला सामोरे जा आणि यशस्वी हो.</p>
+                            <a href="#" class="step-link">परीक्षा टिप्स</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="journey-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%;"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="progress-step active">
+                            <div class="step-dot"></div>
+                            <span>सुरूवात</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-dot"></div>
+                            <span>अभ्यास</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-dot"></div>
+                            <span>टेस्ट</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-dot"></div>
+                            <span>परीक्षा</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand">
+                <h2>महेश शरमाळे</h2>
+                <p class="footer-tagline">स्पर्धा परीक्षेचा आत्मविश्वास, आता प्रत्येक गावात</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon-box"><i class="social-icon">YT</i></a>
+                    <a href="#" class="social-icon-box"><i class="social-icon">IG</i></a>
+                    <a href="#" class="social-icon-box"><i class="social-icon">TG</i></a>
+                    <a href="#" class="social-icon-box"><i class="social-icon">FB</i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section links">
+                <h3>क्विक लिंक्स</h3>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">मुखपृष्ठ</a></li>
+                        <li><a href="courses.html">कोर्सेस</a></li>
+                        <li><a href="test-series.html">टेस्ट सिरीज</a></li>
+                        <li><a href="live-classes.html">लाईव्ह क्लासेस</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="mentorship.html">मार्गदर्शन</a></li>
+                        <li><a href="batches.html">बॅचेस</a></li>
+                        <li><a href="success-stories.html">यशोगाथा</a></li>
+                        <li><a href="about.html">माझ्याविषयी</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-section contact">
+                <h3>संपर्क</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+91 9XXXXXXXXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>info@maheshsharmale.in</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🏢</span>
+                        <span>पुणे, महाराष्ट्र</span>
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <h4>न्यूजलेटर सबस्क्राइब करा</h4>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="ईमेल अड्रेस" class="newsletter-input">
+                        <button class="newsletter-btn">सबस्क्राइब</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2023 महेश शरमाळे. सर्व हक्क राखीव.</p>
+            </div>
+            <div class="footer-app">
+                <p>आमचे अॅप डाउनलोड करा</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">Android</a>
+                    <a href="#" class="app-btn">iOS</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="whatsapp-float">
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="whatsapp-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+                <span class="whatsapp-text">WhatsApp वर संपर्क करा</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+<script>
+    // Add animation classes on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.querySelectorAll('.animate-on-load').forEach(function(element, index) {
+                setTimeout(function() {
+                    element.classList.add('show');
+                }, index * 200);
+            });
+        }, 300);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>माझ्याविषयी - महेश शरमाळे</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Mukta:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+            width: 100px;
+            height: 100px;
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+    <style>
+        .about-section {
+            padding: 5rem 5%;
+        }
+        
+        .about-container {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .about-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-content {
+            flex: 2;
+        }
+        
+        .about-content h2 {
+            color: var(--primary-color);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .journey-section {
+            background-color: var(--light-color);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .journey-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .journey-section h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 6px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .timeline-item.right {
+            transform: translateX(30px);
+        }
+        
+        .timeline-item.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: var(--secondary-color);
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(255, 109, 0, 0.2);
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -12px;
+        }
+        
+        .right::after {
+            left: -12px;
+        }
+        
+        .timeline-content {
+            padding: 25px;
+            background-color: var(--bg-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .timeline-content .date {
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .values-section {
+            padding: 3rem;
+            background: linear-gradient(135deg, #e8f5fe 0%, #f0f4fd 100%);
+            border-radius: var(--border-radius);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .values-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .values-section h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-item {
+            background-color: var(--light-color);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .value-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .value-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 992px) {
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .left::after, .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>महेश शरमाळे</h1>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">होमपेज</a></li>
+                <li><a href="courses.html">कोर्सेस</a></li>
+                <li><a href="test-series.html">टेस्ट सिरीज</a></li>
+                <li><a href="batches.html">बॅचेस</a></li>
+                <li><a href="mentorship.html">मेंटॉरशिप</a></li>
+                <li><a href="videos.html">व्हिडीओज</a></li>
+                <li><a href="webinars.html">वेबिनार्स</a></li>
+                <li><a href="testimonials.html">विद्यार्थी अनुभव</a></li>
+                <li><a href="blog.html">ब्लॉग</a></li>
+                <li><a href="about.html" class="active">माझ्याविषयी</a></li>
+                <li><a href="contact.html">संपर्क</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>माझ्याविषयी</h1>
+            <p>महेश शरमाळे - पोलीस भरती तज्ञ आणि अनुभवी मार्गदर्शक</p>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="image-placeholder">महेश शरमाळे फोटो</div>
+                </div>
+                <div class="about-content">
+                    <h2>महेश शरमाळे</h2>
+                    <p>नमस्कार, मी महेश शरमाळे. गेल्या ५+ वर्षांपासून मी स्पर्धा परीक्षांसाठी विद्यार्थ्यांना मार्गदर्शन करत आहे. माझ्या मार्गदर्शनाखाली १०००+ विद्यार्थी यशस्वी झाले आहेत.</p>
+                    <p>पोलीस भरती, तलाठी, वनरक्षक आणि इतर स्पर्धा परीक्षांसाठी मी विशेष अभ्यासक्रम तयार केला आहे. माझा विश्वास आहे की प्रत्येक विद्यार्थी योग्य मार्गदर्शन आणि मेहनतीने यशस्वी होऊ शकतो.</p>
+                    <p>मी स्वतः पोलीस भरती परीक्षेत उत्तीर्ण झालो आहे आणि माझा अनुभव विद्यार्थ्यांना मार्गदर्शन करण्यासाठी वापरतो. माझे शिक्षण, अनुभव आणि विद्यार्थ्यांप्रती असलेली प्रामाणिकता हे माझे यश आहे.</p>
+                </div>
+            </div>
+
+            <div class="journey-section">
+                <h2>माझा प्रवास</h2>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>शिक्षण पूर्ण</h3>
+                            <p class="date">२०१३</p>
+                            <p>पदवीधर शिक्षण पूर्ण केले आणि स्पर्धा परीक्षांची तयारी सुरू केली.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>पोलीस भरती परीक्षेत यश</h3>
+                            <p class="date">२०१५</p>
+                            <p>पोलीस भरती परीक्षेत उत्तीर्ण झालो आणि इतरांना मार्गदर्शन करण्याचा निर्णय घेतला.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>मार्गदर्शन सुरू</h3>
+                            <p class="date">२०१७</p>
+                            <p>स्पर्धा परीक्षांसाठी विद्यार्थ्यांना मार्गदर्शन करण्यास सुरुवात केली.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>१००+ विद्यार्थी यशस्वी</h3>
+                            <p class="date">२०१९</p>
+                            <p>माझ्या मार्गदर्शनाखाली १००+ विद्यार्थी विविध स्पर्धा परीक्षांमध्ये यशस्वी झाले.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>ऑनलाइन प्लॅटफॉर्म सुरू</h3>
+                            <p class="date">२०२०</p>
+                            <p>कोविड-१९ मुळे ऑनलाइन शिक्षण प्लॅटफॉर्म सुरू केले.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>१०००+ यशस्वी विद्यार्थी</h3>
+                            <p class="date">२०२३</p>
+                            <p>आजपर्यंत १०००+ विद्यार्थी माझ्या मार्गदर्शनाखाली यशस्वी झाले आहेत.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="values-section">
+                <h2>माझी मूल्ये</h2>
+                <div class="values-container">
+                    <div class="value-item">
+                        <div class="value-icon">🎯</div>
+                        <h3>लक्ष्य-केंद्रित</h3>
+                        <p>प्रत्येक विद्यार्थ्याच्या लक्ष्यावर केंद्रित मार्गदर्शन.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🤝</div>
+                        <h3>प्रामाणिकता</h3>
+                        <p>विद्यार्थ्यांशी प्रामाणिक आणि पारदर्शक संवाद.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">💪</div>
+                        <h3>कठोर परिश्रम</h3>
+                        <p>यशासाठी कठोर परिश्रम आणि समर्पण आवश्यक.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">🧠</div>
+                        <h3>सतत शिक्षण</h3>
+                        <p>नवीन पद्धती आणि ज्ञान आत्मसात करणे.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>संपर्क</h3>
+                <p>📱 मोबाईल: +91 9XXXXXXXXX</p>
+                <p>✉️ ईमेल: info@maheshsharmale.in</p>
+                <p>🏢 पत्ता: पुणे, महाराष्ट्र</p>
+            </div>
+            <div class="footer-section">
+                <h3>सोशल मीडिया</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">YouTube</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>क्विक लिंक्स</h3>
+                <ul>
+                    <li><a href="index.html">होमपेज</a></li>
+                    <li><a href="courses.html">कोर्सेस</a></li>
+                    <li><a href="about.html">माझ्याविषयी</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 महेश शरमाळे. सर्व हक्क राखीव.</p>
+        </div>
+        <div class="whatsapp-float">
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animate sections on scroll
+        function animateSections() {
+            const sections = [
+                document.querySelector('.about-container'),
+                document.querySelector('.journey-section'),
+                document.querySelector('.values-section')
+            ];
+            
+            sections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    section.classList.add('show');
+                }
+            });
+            
+            // Animate timeline items
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                if (item.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    item.classList.add('show');
+                }
+            });
+            
+            // Animate value items
+            const valueItems = document.querySelectorAll('.value-item');
+            valueItems.forEach((item, index) => {
+                if (item.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    setTimeout(() => {
+                        item.classList.add('show');
+                    }, index * 150);
+                }
+            });
+        }
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateSections);
+        
+        // Run once on page load
+        setTimeout(animateSections, 300);
+    });
+</script>
+</body>
+</html>

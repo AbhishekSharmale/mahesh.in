@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>विद्यार्थी अनुभव - महेश शरमाळे</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Mukta:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .ripple {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+            width: 100px;
+            height: 100px;
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+    <style>
+        .testimonials-section {
+            padding: 5rem 5%;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .testimonial-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.5rem;
+            overflow: hidden;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+            font-size: 1.5rem;
+        }
+        
+        .testimonial-info p {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        .testimonial-content::before {
+            content: '"';
+            font-size: 5rem;
+            position: absolute;
+            top: -30px;
+            left: -15px;
+            color: rgba(0, 0, 0, 0.05);
+            font-family: serif;
+        }
+        
+        .success-stories {
+            margin-top: 5rem;
+        }
+        
+        .story-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .story-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .story-header {
+            background: linear-gradient(90deg, var(--primary-color), #3949ab);
+            color: var(--light-color);
+            padding: 2rem;
+        }
+        
+        .story-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+        
+        .story-content {
+            padding: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+        
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .story-image-container {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .before-after {
+            flex: 1;
+            background: linear-gradient(45deg, #f5f7fa, #e8f5fe);
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            font-weight: 600;
+            color: #555;
+        }
+        
+        .before-after:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .story-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .story-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .story-details p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .achievement-list {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+            list-style: disc;
+        }
+        
+        .achievement-list li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .story-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>महेश शरमाळे</h1>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">होमपेज</a></li>
+                <li><a href="courses.html">कोर्सेस</a></li>
+                <li><a href="test-series.html">टेस्ट सिरीज</a></li>
+                <li><a href="batches.html">बॅचेस</a></li>
+                <li><a href="mentorship.html">मेंटॉरशिप</a></li>
+                <li><a href="videos.html">व्हिडीओज</a></li>
+                <li><a href="webinars.html">वेबिनार्स</a></li>
+                <li><a href="testimonials.html" class="active">विद्यार्थी अनुभव</a></li>
+                <li><a href="blog.html">ब्लॉग</a></li>
+                <li><a href="about.html">माझ्याविषयी</a></li>
+                <li><a href="contact.html">संपर्क</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>विद्यार्थी अनुभव</h1>
+            <p>आमच्या यशस्वी विद्यार्थ्यांचे अनुभव वाचा</p>
+        </section>
+
+        <section class="testimonials-section">
+            <h2 class="section-title">विद्यार्थ्यांचे अभिप्राय</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-image">
+                            <span>AS</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>अमोल साळुंखे</h3>
+                            <p>पोलीस भरती २०२२</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>महेश सरांच्या मार्गदर्शनामुळे मी पोलीस भरती परीक्षेत यशस्वी झालो. त्यांचे मार्गदर्शन आणि अभ्यास साहित्य अतिशय उपयुक्त होते. शारीरिक चाचणीसाठी त्यांनी दिलेले टिप्स खूप मदत झाले.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-image">
+                            <span>SP</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>स्वाती पाटील</h3>
+                            <p>तलाठी परीक्षा २०२१</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>महेश सरांच्या मार्गदर्शनामुळे मी तलाठी परीक्षेत प्रथम प्रयत्नात यशस्वी झाले. त्यांचे अभ्यास साहित्य आणि मॉक टेस्ट खूप उपयुक्त होते. त्यांचे मार्गदर्शन नेहमीच प्रेरणादायी असते.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-image">
+                            <span>RJ</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>राहुल जाधव</h3>
+                            <p>वनरक्षक २०२२</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>महेश सरांच्या मार्गदर्शनामुळे मी वनरक्षक परीक्षेत यशस्वी झालो. त्यांचे मार्गदर्शन आणि अभ्यास साहित्य अतिशय उपयुक्त होते. शारीरिक चाचणीसाठी त्यांनी दिलेले टिप्स खूप मदत झाले.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-image">
+                            <span>PK</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>प्रणाली कदम</h3>
+                            <p>पोलीस भरती २०२३</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>महेश सरांच्या मार्गदर्शनामुळे मी पोलीस भरती परीक्षेत यशस्वी झाले. त्यांचे मार्गदर्शन आणि अभ्यास साहित्य अतिशय उपयुक्त होते. शारीरिक चाचणीसाठी त्यांनी दिलेले टिप्स खूप मदत झाले.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-image">
+                            <span>VG</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>विशाल गायकवाड</h3>
+                            <p>ZP परीक्षा २०२१</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>महेश सरांच्या मार्गदर्शनामुळे मी ZP परीक्षेत यशस्वी झालो. त्यांचे अभ्यास साहित्य आणि मॉक टेस्ट खूप उपयुक्त होते. त्यांचे मार्गदर्शन नेहमीच प्रेरणादायी असते.</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-image">
+                            <span>SM</span>
+                        </div>
+                        <div class="testimonial-info">
+                            <h3>सुनील मोरे</h3>
+                            <p>पोलीस भरती २०२२</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>महेश सरांच्या मार्गदर्शनामुळे मी पोलीस भरती परीक्षेत यशस्वी झालो. त्यांचे मार्गदर्शन आणि अभ्यास साहित्य अतिशय उपयुक्त होते. शारीरिक चाचणीसाठी त्यांनी दिलेले टिप्स खूप मदत झाले.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="success-stories">
+                <h2 class="section-title">यशोगाथा</h2>
+                
+                <div class="story-card">
+                    <div class="story-header">
+                        <h2>अमोल साळुंखे - पोलीस भरती २०२२</h2>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-image">
+                            <div class="story-image-container">
+                                <div class="before-after">तयारी सुरू करताना</div>
+                                <div class="before-after">पोलीस भरती उत्तीर्ण</div>
+                            </div>
+                        </div>
+                        <div class="story-details">
+                            <h3>अमोलचा प्रवास</h3>
+                            <p>अमोल हा एका छोट्या गावातून आलेला विद्यार्थी. त्याला पोलीस होण्याची इच्छा होती पण योग्य मार्गदर्शन नव्हते. महेश सरांच्या मार्गदर्शनाखाली त्याने अभ्यास सुरू केला आणि ६ महिन्यांच्या कठोर परिश्रमानंतर तो पोलीस भरती परीक्षेत यशस्वी झाला.</p>
+                            
+                            <h4>अमोलची यशोगाथा:</h4>
+                            <ul class="achievement-list">
+                                <li>शारीरिक चाचणीत ९०/१०० गुण</li>
+                                <li>लेखी परीक्षेत ८५/१०० गुण</li>
+                                <li>मुलाखतीत उत्कृष्ट कामगिरी</li>
+                                <li>पहिल्याच प्रयत्नात यशस्वी</li>
+                            </ul>
+                            
+                            <p>"महेश सरांच्या मार्गदर्शनामुळे माझे स्वप्न पूर्ण झाले. त्यांचे आभार!" - अमोल साळुंखे</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-header">
+                        <h2>स्वाती पाटील - तलाठी परीक्षा २०२१</h2>
+                    </div>
+                    <div class="story-content">
+                        <div class="story-image">
+                            <div class="story-image-container">
+                                <div class="before-after">तयारी सुरू करताना</div>
+                                <div class="before-after">तलाठी परीक्षा उत्तीर्ण</div>
+                            </div>
+                        </div>
+                        <div class="story-details">
+                            <h3>स्वातीचा प्रवास</h3>
+                            <p>स्वाती ही पुण्यातील विद्यार्थिनी. तिला तलाठी होण्याची इच्छा होती. महेश सरांच्या मार्गदर्शनाखाली तिने अभ्यास सुरू केला आणि ४ महिन्यांच्या कठोर परिश्रमानंतर ती तलाठी परीक्षेत यशस्वी झाली.</p>
+                            
+                            <h4>स्वातीची यशोगाथा:</h4>
+                            <ul class="achievement-list">
+                                <li>लेखी परीक्षेत ९२/१०० गुण</li>
+                                <li>मुलाखतीत उत्कृष्ट कामगिरी</li>
+                                <li>पहिल्याच प्रयत्नात यशस्वी</li>
+                                <li>राज्यात १५ वा क्रमांक</li>
+                            </ul>
+                            
+                            <p>"महेश सरांच्या मार्गदर्शनामुळे माझे स्वप्न पूर्ण झाले. त्यांचे आभार!" - स्वाती पाटील</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>संपर्क</h3>
+                <p>📱 मोबाईल: +91 9XXXXXXXXX</p>
+                <p>✉️ ईमेल: info@maheshsharmale.in</p>
+                <p>🏢 पत्ता: पुणे, महाराष्ट्र</p>
+            </div>
+            <div class="footer-section">
+                <h3>सोशल मीडिया</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">YouTube</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>क्विक लिंक्स</h3>
+                <ul>
+                    <li><a href="index.html">होमपेज</a></li>
+                    <li><a href="courses.html">कोर्सेस</a></li>
+                    <li><a href="about.html">माझ्याविषयी</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 महेश शरमाळे. सर्व हक्क राखीव.</p>
+        </div>
+        <div class="whatsapp-float">
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animate testimonial cards
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        testimonialCards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('show');
+            }, 200 + (index * 150));
+        });
+        
+        // Animate story cards on scroll
+        function animateStoryCards() {
+            const storyCards = document.querySelectorAll('.story-card');
+            storyCards.forEach(card => {
+                if (card.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                    card.classList.add('show');
+                }
+            });
+        }
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateStoryCards);
+        
+        // Run once on page load
+        setTimeout(animateStoryCards, 500);
+    });
+</script>
+</body>
+</html>
