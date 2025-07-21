@@ -1,0 +1,273 @@
+/* Animation Styles */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll-based reveal animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(10px, 15px) rotate(2deg); }
+    100% { transform: translate(-10px, 5px) rotate(-2deg); }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Animated Elements */
+.course-card, .test-card, .video-card, .performer-card, .batch-card, .webinar-card, .journey-step {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.course-card.animate, .test-card.animate, .video-card.animate, .performer-card.animate, .batch-card.animate, .webinar-card.animate, .journey-step.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-title {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.section-title.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Hover Effects */
+.course-card, .test-card, .video-card, .performer-card, .batch-card, .webinar-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card::after, .test-card::after, .video-card::after, .performer-card::after, .batch-card::after, .webinar-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-out;
+}
+
+.course-card:hover::after, .test-card:hover::after, .video-card:hover::after, .performer-card:hover::after, .batch-card:hover::after, .webinar-card:hover::after {
+    transform: scaleX(1);
+}
+
+/* Button Animations */
+.cta-btn {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-btn:hover::before {
+    left: 100%;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Hero Section Animations */
+.hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero::before {
+    top: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(45deg, rgba(255, 167, 38, 0.1), rgba(27, 60, 115, 0.1));
+    animation: float 15s infinite alternate ease-in-out;
+}
+
+.hero::after {
+    bottom: -15%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, rgba(27, 60, 115, 0.1), rgba(255, 167, 38, 0.1));
+    animation: float 20s infinite alternate-reverse ease-in-out;
+}
+
+.hero-content h1 {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    animation: fadeInUp 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+.hero-badge {
+    animation: fadeInUp 1s ease-out 0.1s;
+    animation-fill-mode: both;
+}
+
+.cta-group {
+    animation: fadeInUp 1s ease-out 0.5s;
+    animation-fill-mode: both;
+}
+
+.hero-image {
+    animation: fadeIn 1.5s ease-out 0.7s;
+    animation-fill-mode: both;
+}
+
+/* Image Placeholder Animation */
+.image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+/* Live Badge Animation */
+.video-badge.live {
+    animation: pulse 1.5s infinite;
+}
+
+/* Staggered Animation for Cards */
+.course-card:nth-child(1), .test-card:nth-child(1), .video-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.course-card:nth-child(2), .test-card:nth-child(2), .video-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.course-card:nth-child(3), .test-card:nth-child(3), .video-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Animate on Load */
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-load.show {
+    opacity: 1;
+    transform: translateY(0);
+}

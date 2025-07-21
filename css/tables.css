@@ -1,0 +1,88 @@
+/* Table Styles */
+
+.leaderboard {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.leaderboard-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.leaderboard-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.leaderboard-table tbody tr {
+    background-color: white;
+    transition: var(--transition);
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.leaderboard-table tbody tr:hover {
+    background-color: rgba(255, 167, 38, 0.1);
+}
+
+.leaderboard-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.leaderboard-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Rank styling */
+.leaderboard-table td:first-child {
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Top 3 ranks */
+.leaderboard-table tbody tr:nth-child(1) td:first-child {
+    color: gold;
+    font-size: 1.2rem;
+}
+
+.leaderboard-table tbody tr:nth-child(2) td:first-child {
+    color: silver;
+    font-size: 1.1rem;
+}
+
+.leaderboard-table tbody tr:nth-child(3) td:first-child {
+    color: #cd7f32; /* bronze */
+    font-size: 1.1rem;
+}
+
+/* Score styling */
+.leaderboard-table td:last-child {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+    .leaderboard-table {
+        font-size: 0.9rem;
+    }
+    
+    .leaderboard-table th,
+    .leaderboard-table td {
+        padding: 0.8rem 0.5rem;
+    }
+}

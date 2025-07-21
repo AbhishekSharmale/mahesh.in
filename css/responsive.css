@@ -1,0 +1,335 @@
+/* Mobile-First Responsive Styles */
+
+/* Base styles are for mobile devices */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Hero Section - Mobile */
+.hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+}
+
+.cta-group {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cta-btn {
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.instructor-frame {
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.image-placeholder {
+    height: 250px;
+}
+
+.success-counter {
+    margin: 1rem auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp-text {
+    display: none;
+}
+
+.whatsapp-link {
+    padding: 12px;
+}
+
+.free-test-notification {
+    bottom: 80px;
+    right: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+    flex-wrap: wrap;
+}
+
+.notification-content {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.notification-btn {
+    margin-right: auto;
+}
+
+/* Section Styles - Mobile */
+.app-like-section {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+}
+
+/* Cards - Mobile */
+.course-cards, .test-cards, .video-grid, .batches-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.course-card, .test-card, .video-card, .batch-card, .webinar-card {
+    padding: 1.5rem;
+}
+
+/* Test Series - Mobile */
+.tab-buttons {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Mentorship - Mobile */
+.mentorship-container {
+    grid-template-columns: 1fr;
+}
+
+.mentorship-cta {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Journey - Mobile */
+.journey-step {
+    flex-direction: column;
+}
+
+.step-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+}
+
+.progress-step span {
+    font-size: 0.8rem;
+}
+
+/* Footer - Mobile */
+.footer-content {
+    grid-template-columns: 1fr;
+}
+
+.footer-links {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.newsletter-form {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newsletter-input, .newsletter-btn {
+    width: 100%;
+    border-radius: 50px;
+}
+
+/* Tablet Styles */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .cta-group {
+        flex-direction: row;
+    }
+    
+    .cta-btn {
+        width: auto;
+    }
+    
+    .instructor-frame {
+        max-width: 320px;
+    }
+    
+    .course-cards, .test-cards, .video-grid, .batches-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+    }
+    
+    .newsletter-input {
+        border-radius: 50px 0 0 50px;
+    }
+    
+    .newsletter-btn {
+        width: auto;
+        border-radius: 0 50px 50px 0;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 4rem 5%;
+    }
+    
+    .hero-content {
+        padding-right: 2rem;
+        margin-bottom: 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-group {
+        justify-content: flex-start;
+    }
+    
+    .instructor-frame {
+        max-width: 350px;
+    }
+    
+    .success-counter {
+        margin: 1.5rem 0;
+        width: auto;
+    }
+    
+    .whatsapp-text {
+        display: inline;
+    }
+    
+    .whatsapp-link {
+        padding: 12px 20px;
+    }
+    
+    .free-test-notification {
+        right: 30px;
+        left: auto;
+        max-width: 400px;
+        flex-wrap: nowrap;
+    }
+    
+    .notification-content {
+        margin-bottom: 0;
+        width: auto;
+    }
+    
+    .journey-step {
+        flex-direction: row;
+    }
+    
+    .step-icon {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+    }
+    
+    .mentorship-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-section.brand {
+        grid-column: span 2;
+    }
+    
+    .footer-links {
+        flex-direction: row;
+    }
+}
+
+/* Large Devices */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .instructor-frame {
+        max-width: 400px;
+    }
+    
+    .course-cards, .test-cards, .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1.5fr 1fr 1.5fr;
+    }
+    
+    .footer-section.brand {
+        grid-column: span 1;
+    }
+}
+
+/* Extra Large Devices */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
